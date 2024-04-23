@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemText } from '@material-ui/core'
-import '../../styles/Nav.css'
-import MenuIcon from '@material-ui/icons/Menu'
 
+import MenuIcon from '@material-ui/icons/Menu'
+import '../../styles/Nav.css'
 
 function Nav() {
     const [drawerOpen, setDrawerOpen] = useState(false);
