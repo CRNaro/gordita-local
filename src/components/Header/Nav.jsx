@@ -1,10 +1,21 @@
 import React, { useState } from 'react'
 import { AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemText } from '@material-ui/core'
-
+import { makeStyles } from '@material-ui/core/styles'
 import MenuIcon from '@material-ui/icons/Menu'
 import '../../styles/Nav.css'
 
+const useStyles = makeStyles({
+    drawer: {
+        width: 200,
+        height: '100%',
+        backgroundColor: 'rgba(241, 136, 5)',
+        anchor: 'right'
+    }
+
+});
+
 function Nav() {
+    const classes = useStyles();
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     const handleDrawerToggle = () => {
@@ -24,7 +35,7 @@ function Nav() {
                 </Toolbar>
             </AppBar>
             <Drawer anchor='right' open={drawerOpen} onClose={handleDrawerToggle}>
-                <List>
+                <List className={classes.drawer}>
                     {menuItems.map((text, index) => (
                         <ListItem button key={text}>
                             <ListItemText primary={text} />
