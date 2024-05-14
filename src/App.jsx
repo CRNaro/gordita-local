@@ -7,6 +7,12 @@ import Header from './components/Header/Header'
 import Home from './components/Pages/Home';
 import About from './components/Pages/About'
 import Menu from './components/Pages/Menu'
+import Calendar from './components/Pages/Calendar'
+import Contact from './components/Pages/Contact'
+import Friends from './components/Pages/Friends'
+import History from './components/Pages/History'
+import News from './components/Pages/News'
+
 
 const theme = createTheme({
   palette: {
@@ -35,12 +41,17 @@ function App() {
         <Route path='/about' element={<About />} />
         
         <Route path='/menu' element={<Menu />} />
-        {/*
+        
         <Route path='/calendar' element={<Calendar />} />
+
         <Route path='/contact' element={<Contact />} />
+        
         <Route path='/friends' element={<Friends />} />
+     
         <Route path='/history' element={<History />} />
-        <Route path='/portfolio' element={<Portfolio />} />
+           
+        <Route path='/news' element={<News />} />
+           {/*
         <Footer />  */}
         </Routes>
         </Router>

@@ -23,7 +23,7 @@ function Nav() {
         setDrawerOpen(!drawerOpen);
     };
 
-    const menuItems = ['Home', 'Menu', 'About', 'Calendar', 'Contact', 'Friends', 'History', 'In the News']; //add a menu
+    const menuItems = ['Home', 'Menu', 'About', 'Calendar', 'Contact', 'Friends', 'History', 'News']; //add a menu
 
 
     return (

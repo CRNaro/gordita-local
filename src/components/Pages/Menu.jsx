@@ -20,6 +20,19 @@ const useStyles = makeStyles ({
         border: '3px solid rgba(241, 136, 5)',
         boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
     },
+    header: {
+      fontFamily: "'A Day Without Sun', cursive",
+      fontSize: '5rem',
+      textAlign: 'center',
+      textShadow: '2px 2px 2px rgba(0, 0, 0, 0.5)',
+    },
+    menuItems: {
+      '& div': {
+        display: 'block',
+      },
+      justifyContent: 'space-around',
+      padding: '1rem',
+    },
 });
 
 function Menu() {
@@ -28,15 +41,20 @@ function Menu() {
    <div>
   <Card className={classes.menu}>
     <CardContent>
-      <Typography gutterBottom variant="h5" component="h2">
-        Menu Card
+      <Typography gutterBottom variant="h5" component="h2" className={classes.header}>
+        Our Menu
       </Typography>
-      <Typography variant="body2" color="textSecondary" component="p">
-        Description of the Menu
+      <Typography variant="body2" color="textSecondary" component="p" className={classes.menuItems}>
+        <div>Menu item</div> 
+        <div>Menu item</div>
+        <div>Menu item</div>
+        <div>Menu item</div> 
+        <div>Menu item</div>
+        <div>Menu item</div>
       </Typography>
     </CardContent>
     <Button size="small" color="primary">
-      Share
+      Share with Friends!
     </Button>
   </Card>
   </div>

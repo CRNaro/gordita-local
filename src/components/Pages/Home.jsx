@@ -45,7 +45,7 @@ export default function Home() {
             <CardMedia
                 className={classes.media}
                 image={feastImg}
-                title="Title of the Image"
+                title="Barria Taco Feast"
             />
             <Card className={classes.card}>
                 <CardContent>
