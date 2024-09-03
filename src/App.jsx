@@ -1,9 +1,10 @@
 import { useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 import { CssBaseline } from '@material-ui/core'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/Header/Header'
-//import Footer from './components/Footer/Footer'
+import Footer from './components/Footer/Footer'
 import Home from './components/Pages/Home';
 import About from './components/Pages/About'
 import Menu from './components/Pages/Menu'
@@ -28,34 +29,51 @@ const theme = createTheme({
   }
 }
 });
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+  },
+  content: {
+    flex: 1,
+    paddingTop: '10rem',
+  },
+header: {
+  position: 'fixed',
+  top: 0,
+  width: '100%',
+  zIndex: 1000,
+},
+});
 
 function App() {
+  const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <div className={classes.root}>
       <Router>
+        <div className={classes.header}>
         <Header />
+        </div>
+        <div className={classes.content}>
         <Routes>
           <Route path='*' element={<Home />} />
-        
-        <Route path='/about' element={<About />} />
-        
-        <Route path='/menu' element={<Menu />} />
-        
-        <Route path='/calendar' element={<Calendar />} />
-
-        <Route path='/contact' element={<Contact />} />
-        
-        <Route path='/friends' element={<Friends />} />
-     
-        <Route path='/history' element={<History />} />
-           
-        <Route path='/news' element={<News />} />
-           {/*
-        <Footer />  */}
+          <Route path='/about' element={<About />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route path='/calendar' element={<Calendar />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/friends' element={<Friends />} />
+          <Route path='/history' element={<History />} />
+          <Route path='/news' element={<News />} />
         </Routes>
+        </div>
         </Router>
+        <Footer />  
+        </div>
       </ThemeProvider>
+       
   )
 }
 

@@ -5,15 +5,18 @@ import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'react-router-dom'
 import '../../styles/Nav.css'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     drawer: {
-        width: 200,
+        width: '100%',
+        [theme.breakpoints.up('sm')]: {
+            width: '100%',
+        },
         height: '100%',
         backgroundColor: 'rgba(241, 136, 5)',
         anchor: 'right'
     }
 
-});
+}));
 
 function Nav() {
     const classes = useStyles();
@@ -38,7 +41,7 @@ function Nav() {
             <Drawer anchor='right' open={drawerOpen} onClose={handleDrawerToggle}>
                 <List className={classes.drawer}>
                     {menuItems.map((text, index) => (
-                        <ListItem button key={text} component={Link} to={`/${text.toLowerCase()}`}>
+                        <ListItem button key={text} component={Link} to={`/${text.toLowerCase()}`} onClick={() => setDrawerOpen(false)}>
                             <ListItemText primary={text} />
                         </ListItem>
                         
