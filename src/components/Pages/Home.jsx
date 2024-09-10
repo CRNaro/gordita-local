@@ -78,6 +78,13 @@ export default function Home() {
     const goToMenu = () => {
         navigate('/menu');
     }
+    const goToFestivalMenu = () => {
+        navigate('/festivalmenu');
+    }
+    const goToPopupMenu = () => {
+        navigate('/popupmenu');
+    }
+
 
     return (
         <Grid container className={classes.root}>
@@ -100,6 +107,14 @@ export default function Home() {
                 </CardContent>
                 <Button size="small" color="primary" onClick={goToMenu}>
                     View Our Menu
+                </Button>
+                <br />
+                <Button size="small" color="primary" onClick={goToFestivalMenu}>
+                    Festival Menu(FOR BUILD ONLY-DELETE LINK LATER)
+                </Button>
+                <br />
+                <Button size="small" color="primary" onClick={goToFestivalMenu}>
+                    Popup Menu(FOR BUILD ONLY-DELETE LINK LATER)
                 </Button>
                 <br />
                 <Button size="small" color="primary">

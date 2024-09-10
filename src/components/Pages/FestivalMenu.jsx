@@ -62,7 +62,7 @@ function Menu() {
         component="h2"
         className={classes.header}
       >
-        Our Menu
+        Our Menu - Festival
       </Typography>
 
       <div className={classes.root}>

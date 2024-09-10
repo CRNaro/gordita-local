@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(251, 255, 244, 0.7)",
     border: "3px solid rgba(241, 136, 5)",
     boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)",
+    
   },
   header: {
     fontFamily: "'A Day Without Sun', cursive",
@@ -40,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
       display: "block",
     },
     justifyContent: "space-around",
-    padding: "1rem",
+    // padding: "1rem",
+    textAlign: "center",
   },
   menuMedia: {
     height: "100%",
@@ -74,63 +76,82 @@ function Menu() {
           ></CardMedia> */}
           <CardContent>
             <Typography
-              variant="body2"
+              variant="h6"
               color="textSecondary"
-              component="div"
+              component="h6"
               className={classes.menuItems}
             >
               Original Birria Taco
             </Typography>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-              component="div"
-              className={classes.menuItems}
-            >
-              Queso Birria
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.menuItems}>
+                Original description of the menu item. It is very delicious and you should try it!
             </Typography>
             <Typography
-              variant="body2"
+              variant="h6"
               color="textSecondary"
-              component="div"
+              component="h6"
               className={classes.menuItems}
             >
-              3 Original Birria Tacos
+              Original Birria Taco Combo (3)
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.menuItems}>
+                Original Combo description of the menu item. It is very delicious and you should try it!
             </Typography>
             <Typography
-              variant="body2"
+              variant="h6"
               color="textSecondary"
-              component="div"
+              component="h6"
               className={classes.menuItems}
             >
-              3 Queso Birria Tacos
+              Queso Birria Taco
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.menuItems}>
+                Queso description of the menu item. It is very delicious and you should try it!
             </Typography>
             <Typography
-              variant="body2"
+              variant="h6"
               color="textSecondary"
-              component="div"
+              component="h6"
               className={classes.menuItems}
             >
-              Barria Ramen
+              Queso Birria Taco Combo (3)
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.menuItems}>
+                Queso Combo description of the menu item. It is very delicious and you should try it!
             </Typography>
             <Typography
-              variant="body2"
+              variant="h6"
               color="textSecondary"
-              component="div"
+              component="h6"
               className={classes.menuItems}
-            ></Typography>
+            >
+              Birria Ramen
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.menuItems}>
+                Ramen description of the menu item. It is very delicious and you should try it!
+            </Typography>
             <Typography
-              variant="body2"
+              variant="h6"
               color="textSecondary"
-              component="div"
+              component="h6"
               className={classes.menuItems}
-            ></Typography>
+            >
+              Mexican Street Corn
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.menuItems}>
+                Corn description of the menu item. It is very delicious and you should try it!
+            </Typography>
             <Typography
-              variant="body2"
+              variant="h6"
               color="textSecondary"
-              component="div"
+              component="h6"
               className={classes.menuItems}
-            ></Typography>
+            >
+              Churros
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.menuItems}>
+                Churros description of the menu item. It is very delicious and you should try it!
+            </Typography>
           </CardContent>
           <Button size="small" color="primary">
             Download PDF of Menu

@@ -9,6 +9,8 @@ import Home from './components/Pages/Home';
 import About from './components/Pages/About'
 import Menu from './components/Pages/Menu'
 import AccessibleMenu from './components/Pages/AccessibleMenu'
+import PopupMenu from './components/Pages/PopupMenu'
+import FestivalMenu from './components/Pages/FestivalMenu'
 import Calendar from './components/Pages/Calendar'
 import Contact from './components/Pages/Contact'
 import Friends from './components/Pages/Friends'
@@ -63,7 +65,9 @@ function App() {
           <Route path='*' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/menu' element={<Menu />} />
-          <Route path="/AccessibleMenu" element={<AccessibleMenu />} />
+          <Route path="/accessiblemenu" element={<AccessibleMenu />} />
+          <Route path='/popupmenu' element={<PopupMenu />} />
+          <Route path='/festivalmenu' element={<FestivalMenu />} />
           <Route path='/calendar' element={<Calendar />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/friends' element={<Friends />} />
