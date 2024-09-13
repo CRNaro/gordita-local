@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#F4EDE2",
         border: "3px solid rgba(241, 136, 5)",
         boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)",
+        color: "#111313",
       },
     inputField: {
         width: "50%",

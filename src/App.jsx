@@ -51,10 +51,10 @@ header: {
 },
 nav: {
   position: 'fixed',
-  right: 125,
+  right: 15,
   top: '2rem',
-  width: '7%',
-  zIndex: 2000,
+  backgroundColor: 'transparent',
+  zIndex: 1100,
 },
 });
 

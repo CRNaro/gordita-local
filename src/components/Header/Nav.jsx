@@ -12,9 +12,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
 import "../../styles/Nav.css";
+import navTaco from "../../assets/images/taconav100.png";
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
+    zIndex: 1200,
     width: "100%",
     [theme.breakpoints.up("sm")]: {
       width: "100%",
@@ -24,8 +26,7 @@ const useStyles = makeStyles((theme) => ({
     anchor: "right",
   },
   menuButton: {
-    backgroundColor: 'rgba(32, 44, 89, 0.7)',
-    color: "#F18805",
+   
   },
 
 }));
@@ -51,13 +52,13 @@ function Nav() {
 
   return (
     <div>
-      <AppBar position="static" className={classes.menuButton}>
+      
         <Toolbar >
-          <IconButton edge="start" color="inherit" onClick={handleDrawerToggle}  >
+          <IconButton edge="start" onClick={handleDrawerToggle} style={{ color: '#F18805'}} >
             <MenuIcon />
           </IconButton>
         </Toolbar>
-      </AppBar>
+      
       <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
         <List className={classes.drawer}>
           {menuItems.map((text, index) => (

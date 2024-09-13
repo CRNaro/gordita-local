@@ -67,7 +67,7 @@ function Header() {
             
             <div className={classes.titleContainer}>
             <Typography variant="h1" className={classes.title}>.Birria Gordita Tacos.</Typography>
-            <CardMedia title="Birria Gordita Tacos" className={classes.logo} image={logo}></CardMedia>
+            {/* <CardMedia title="Birria Gordita Tacos" className={classes.logo} image={logo}></CardMedia> */}
            
             </div>  
            
