@@ -18,24 +18,42 @@ import { useNavigate } from 'react-router-dom';
     lightOrange: #F0A202
     */ 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(({
     root: {
         position: 'relative',
         width: '100%',
-        height: '100vh',
+        height: '125vh',
+        '@media (max-width: 600px) and (max-width: 900px)': {
+            top: '10%',
+            height: '100vh',
+            // left: '25%',
+        },
     },
     media: {
+        position: 'absolute',
         height: '100%',
-        width: '95%',
+        width: '100%',
         margin: 'auto',
         borderRadius:'3px',
         border: '1px solid #F18805',
         boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
+        zIndex: 1,
+        '@media (max-width: 600px) and (max-width: 900px)': {
+            // top: '5%',
+            height: '100vh',
+            width: '125vh',
+        },
     },
-    card: {
+    welcomeCard: {
         position: 'absolute',
-        top: '50%',
-        left: '30%',
+        top: '25%',
+        left: '25%',
+        '@media (max-width: 600px) and (max-width: 900px)': {
+            top: '50%',
+            left: '50%',
+            width: '100%',
+            height: 'auto',
+        },
         transform: 'translate(-50%, -50%)',
         width: '40%',
         height: 'auto',
@@ -45,6 +63,27 @@ const useStyles = makeStyles({
         boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
         transition: 'opacity 2s ease-in-out',
         opacity: props => props.opacity ? 1 : 0,
+        zIndex: 200,
+    },
+    navCard: {
+        position: 'absolute',
+        top: '60%',
+        left: '25%',
+        '@media (max-width: 600px) and (max-width: 900px)': {
+            top: '125vh',
+            left: '50%',
+            width: '100%',
+        },
+        transform: 'translate(-50%, -50%)',
+        width: '40%',
+        height: 'auto',
+        padding: 20,
+        backgroundColor: 'rgba(251, 255, 244, 0.7)',
+        border: '3px solid #F18805',
+        boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
+        transition: 'opacity 2s ease-in-out',
+        opacity: props => props.opacity ? 1 : 0,
+        zIndex: 200,
     },
     customBlack: {
         color: '#111313',
@@ -61,7 +100,7 @@ const useStyles = makeStyles({
     customLightOrange: {
         color: '#F0A202',
     },
-});
+}));
 
 export default function Home() {
     const [isVisible, setIsVisible] = useState(false);
@@ -89,15 +128,16 @@ export default function Home() {
 
     return (
      
-        <Grid container className={classes.root}>
-             
+      <Grid container className={classes.root}>
+              <Grid item xs={12} >
             <CardMedia
                 className={classes.media}
                 image={feastImg}
                 title="Barria Taco Feast"
             />
-           
-            <Card className={classes.card}>
+           </Grid>
+              <Grid item xs={12}>
+            <Card className={classes.welcomeCard}>
                 <CardContent>
                     <Typography gutterBottom className={classes.customDarkRed} variant="h5" component="h2">
                         We Are So Happy You're Here!
@@ -109,6 +149,10 @@ export default function Home() {
                         serve you!
                     </Typography>
                 </CardContent>
+                </Card>
+            </Grid>
+            <Grid item xs={12}>
+                <Card class={classes.navCard}>
                 <Button size="small" color="primary" onClick={goToMenu}>
                     View Our Menu
                 </Button>
@@ -138,6 +182,8 @@ export default function Home() {
                 </Button>
                 <br />
             </Card>
+            </Grid>
+       
         </Grid>
     );
 }

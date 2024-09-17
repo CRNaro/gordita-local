@@ -17,6 +17,7 @@ import Friends from './components/Pages/Friends'
 import History from './components/Pages/History'
 import News from './components/Pages/News'
 import Nav from './components/Header/Nav.jsx';
+import { ArrowLeft } from '@material-ui/icons'
 
 
 const theme = createTheme({
@@ -52,9 +53,16 @@ header: {
 nav: {
   position: 'fixed',
   right: 15,
-  top: '2rem',
+  top: '1rem',
   backgroundColor: 'transparent',
   zIndex: 1100,
+  '@media (max-width: 600px) and (max-width: 900px)': {
+
+  },
+},
+footer: {
+  position: 'auto',
+  paddingTop: '40rem',
 },
 });
 
@@ -89,8 +97,10 @@ function App() {
         </Routes>
         </div>
         </Router>
+        <div className={classes.footer}>
         <Footer />  
         </div>
+     </div>
       </ThemeProvider>
        
   )
