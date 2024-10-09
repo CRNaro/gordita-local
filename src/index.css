@@ -1,1 +1,7 @@
-
+@font-face {
+    font-family: 'ADayWithoutSunCustomFont';
+    src: url('./assets/fonts/A-day-without-sun-trial.otf') format('opentype');
+        
+    font-weight: normal;
+    font-style: normal;
+}

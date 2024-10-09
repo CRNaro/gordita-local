@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import PropTypes from 'prop-types';
+import '../../index.css';
 
 const useStyles = makeStyles((theme) => ({
     titleContainer: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center'  
     },
     title: {
-        fontFamily: "'A Day Without Sun', cursive",
+        fontFamily: "'ADayWithoutSunCustomFont', sans-serif",
         fontSize: '3.5rem',
         letterSpacing: '0.2rem',
         textShadow: '2px 2px 2px rgba(0, 0, 0, 0.5)'
