@@ -132,7 +132,16 @@ function Menu() {
               className={classes.menuItems}
             ></Typography> */}
           </CardContent>
-          <Button size="small" color="primary">
+          {/* need to replace the MenuNoPrice with the updated popup menu */}
+          <Button size="small" color="primary"
+             onClick={() => {
+              const link = document.createElement("a");
+              link.href = MenuNoPrice;
+              link.download = "menu.png";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}>
             Download PDF of Menu
           </Button>
           <br />
